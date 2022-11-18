@@ -15,7 +15,10 @@ class Usuario {
         ) 
     }
 
-    addMascota
+    addMascota() {
+        Usuario.totalMascotas = this.mascotas + 1;
+        console.log(totalMascotas)
+    }
 
 
     countMascotas() {
