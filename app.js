@@ -1,32 +1,11 @@
-class Usuario {
-    constructor(nombre, apellido, libros, mascotas){
-        this.nombre = "Gonzalo";
-        this.apellido = "Gonzales";
-        this.libros = ["Libro 1", "Libro 2", "Libro 3"];
-        this.mascotas ("Perro", "Gato");
-    }
+import express from "express"
+import morgan from  "morgan"
 
-    static totalMascotas = 2
+const app = express
 
-    getFullName() {
-        return fuction (
-            this.nombre,
-            this.apellido,
-        ) 
-    }
+app.set("port", 8080);
 
-    addMascota() {
-        Usuario.totalMascotas = this.mascotas + 1;
-        console.log(totalMascotas)
-    }
+app.use(morgan("dev"));
+app.use(express.json());
 
-
-    countMascotas() {
-        return Usuario.totalMascotas;
-    }
-
-    getBookNames() {
-        return this.libros;
-    }
-}
-
+export default app;
